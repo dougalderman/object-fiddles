@@ -309,12 +309,10 @@ function MakeCard(name, cardNum, expir) {
   //Code Here
 
   var bindCard = function(person, creditcard) {
-    var mergedObject = {};
+    var mergedObject = creditcard;
     for (var p in person) {
-      mergedObject[p] = person[p]
-    }
-    for (var prop in creditcard) {
-      mergedObject[prop] = creditcard[prop]
+      if (!mergedObject.hasOwnProperty(p))
+        mergedObject[p] = person[p]
     }
     return mergedObject;
   }
