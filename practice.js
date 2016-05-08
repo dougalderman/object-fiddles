@@ -11,7 +11,7 @@ var me = {
   age: 35
 };
 
-
+alert('my name is: ' + me.name);
 
 //NEXT PROBLEM
 
